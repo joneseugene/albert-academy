@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "allowImportingTsExtensions": true
+  },
+  "nodeModulesDir": "auto",
+  "imports": {
+    "@supabase/supabase-js": "npm:@supabase/supabase-js@2.117.3",
+    "nodemailer": "npm:nodemailer@10.0.16"
+  }
+}

@@ -1,0 +1,29 @@
+[functions.invite-user]
+enabled = true
+verify_jwt = false
+import_map = "./functions/deno.json"
+entrypoint = "./functions/invite-user/index.ts"
+
+[functions.resend-invite]
+enabled = true
+verify_jwt = false
+import_map = "./functions/deno.json"
+entrypoint = "./functions/resend-invite/index.ts"
+
+[functions.forgot-password]
+enabled = true
+verify_jwt = false
+import_map = "./functions/deno.json"
+entrypoint = "./functions/forgot-password/index.ts"
+
+[functions.update-user]
+enabled = true
+verify_jwt = false
+import_map = "./functions/deno.json"
+entrypoint = "./functions/update-user/index.ts"
+
+[functions.delete-user]
+enabled = true
+verify_jwt = false
+import_map = "./functions/deno.json"
+entrypoint = "./functions/delete-user/index.ts"

@@ -1,0 +1,357 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================
+   ALBERT ACADEMY
+   Global Design System
+   ========================================================= */
+
+@layer base {
+  :root {
+    /* =====================================================
+       BRAND
+       ===================================================== */
+
+    --primary: 352 71% 29%;
+    --primary-foreground: 0 0% 100%;
+
+    /* =====================================================
+       BACKGROUND / FOREGROUND
+       ===================================================== */
+
+    --background: 0 0% 100%;
+    --foreground: 20 10% 12%;
+
+    /* =====================================================
+       CARD
+       ===================================================== */
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 10% 12%;
+
+    /* =====================================================
+       POPOVER
+       ===================================================== */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 10% 12%;
+
+    /* =====================================================
+       SECONDARY
+       ===================================================== */
+
+    --secondary: 30 8% 96%;
+    --secondary-foreground: 20 10% 20%;
+
+    /* =====================================================
+       MUTED
+       ===================================================== */
+
+    --muted: 30 8% 96%;
+    --muted-foreground: 20 6% 46%;
+
+    /* =====================================================
+       ACCENT
+       ===================================================== */
+
+    --accent: 352 30% 96%;
+    --accent-foreground: 352 55% 25%;
+
+    /* =====================================================
+       DESTRUCTIVE
+       ===================================================== */
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* =====================================================
+       BORDERS / INPUTS / RING
+       ===================================================== */
+
+    --border: 30 7% 90%;
+    --input: 30 7% 90%;
+    --ring: 352 71% 29%;
+
+    /* =====================================================
+       RADIUS
+       ===================================================== */
+
+    --radius: 0.625rem;
+
+    /* =====================================================
+       CHARTS
+       ===================================================== */
+
+    --chart-1: 352 71% 29%;
+    --chart-2: 142 55% 30%;
+    --chart-3: 32 85% 35%;
+    --chart-4: 215 60% 45%;
+    --chart-5: 20 10% 40%;
+
+    /* =====================================================
+       SIDEBAR
+       ===================================================== */
+
+    --sidebar-background: 0 0% 99%;
+    --sidebar-foreground: 20 10% 15%;
+
+    --sidebar-primary: 352 71% 29%;
+    --sidebar-primary-foreground: 0 0% 100%;
+
+    --sidebar-accent: 352 30% 96%;
+    --sidebar-accent-foreground: 352 55% 25%;
+
+    --sidebar-border: 30 7% 91%;
+    --sidebar-ring: 352 71% 29%;
+
+    /* =====================================================
+       ALBERT ACADEMY CUSTOM TOKENS
+       ===================================================== */
+
+    --aa-burgundy: #7a1523;
+    --aa-burgundy-dark: #64111d;
+    --aa-burgundy-light: #f8edef;
+
+    --aa-surface: #ffffff;
+    --aa-surface-muted: #fafafa;
+
+    --aa-border: #e9e7e5;
+    --aa-border-subtle: #f0efed;
+
+    --aa-text: #292524;
+    --aa-text-muted: #737373;
+
+    --aa-success: #16803c;
+    --aa-warning: #a15c00;
+
+    --aa-table-hover: rgba(0, 0, 0, 0.018);
+    --aa-table-selected: rgba(122, 21, 35, 0.045);
+  }
+
+  /* =======================================================
+     DARK MODE
+     ======================================================= */
+
+  .dark {
+    --background: 20 8% 9%;
+    --foreground: 30 10% 96%;
+
+    --card: 20 7% 12%;
+    --card-foreground: 30 10% 96%;
+
+    --popover: 20 7% 12%;
+    --popover-foreground: 30 10% 96%;
+
+    --primary: 352 55% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 20 6% 17%;
+    --secondary-foreground: 30 10% 96%;
+
+    --muted: 20 6% 17%;
+    --muted-foreground: 30 5% 68%;
+
+    --accent: 352 25% 18%;
+    --accent-foreground: 352 50% 85%;
+
+    --destructive: 0 62% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 5% 22%;
+    --input: 20 5% 22%;
+    --ring: 352 55% 48%;
+
+    --chart-1: 352 55% 48%;
+    --chart-2: 142 50% 42%;
+    --chart-3: 32 75% 48%;
+    --chart-4: 215 55% 55%;
+    --chart-5: 20 10% 65%;
+
+    --sidebar-background: 20 8% 10%;
+    --sidebar-foreground: 30 10% 96%;
+
+    --sidebar-primary: 352 55% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+
+    --sidebar-accent: 352 25% 18%;
+    --sidebar-accent-foreground: 352 50% 85%;
+
+    --sidebar-border: 20 5% 22%;
+    --sidebar-ring: 352 55% 48%;
+
+    --aa-burgundy: #9d3343;
+    --aa-burgundy-dark: #7a1523;
+    --aa-burgundy-light: #32191e;
+
+    --aa-surface: #1f1d1c;
+    --aa-surface-muted: #242221;
+
+    --aa-border: #302e2c;
+    --aa-border-subtle: #292725;
+
+    --aa-text: #f5f5f4;
+    --aa-text-muted: #a3a3a3;
+
+    --aa-table-hover: rgba(255, 255, 255, 0.025);
+    --aa-table-selected: rgba(157, 51, 67, 0.10);
+  }
+
+  /* =======================================================
+     GLOBAL RESET
+     ======================================================= */
+
+  *,
+  *::before,
+  *::after {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    @apply font-sans;
+  }
+
+  body {
+    @apply min-h-screen bg-background font-sans antialiased text-foreground;
+  }
+
+  /* =======================================================
+     TYPOGRAPHY
+     ======================================================= */
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight;
+  }
+
+  h1 {
+    @apply text-2xl font-semibold;
+  }
+
+  h2 {
+    @apply text-xl font-semibold;
+  }
+
+  h3 {
+    @apply text-lg font-semibold;
+  }
+
+  /* =======================================================
+     FOCUS
+     ======================================================= */
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  /* =======================================================
+     TEXT SELECTION
+     ======================================================= */
+
+  ::selection {
+    background: rgba(122, 21, 35, 0.14);
+  }
+
+  /* =======================================================
+     SCROLLBAR
+     ======================================================= */
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.14) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background: rgba(0, 0, 0, 0.14);
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.22);
+  }
+
+  /* =======================================================
+     REDUCED MOTION
+     ======================================================= */
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* =========================================================
+   ALBERT ACADEMY COMPONENT UTILITIES
+   ========================================================= */
+
+@layer components {
+  /* -------------------------------------------------------
+     Thin Card
+     ------------------------------------------------------- */
+
+  .aa-card {
+    @apply rounded-xl border border-border/60 bg-card;
+  }
+
+  /* -------------------------------------------------------
+     Subtle Surface
+     ------------------------------------------------------- */
+
+  .aa-surface {
+    @apply rounded-lg bg-muted/50;
+  }
+
+  /* -------------------------------------------------------
+     Resource Table
+     ------------------------------------------------------- */
+
+  .aa-table {
+    @apply w-full border-0;
+  }
+
+  .aa-table-row {
+    @apply border-0 transition-colors duration-150;
+  }
+
+  .aa-table-row:hover {
+    background: var(--aa-table-hover);
+  }
+
+  .aa-table-row[data-state="selected"] {
+    background: var(--aa-table-selected);
+  }
+
+  .aa-table-cell {
+    @apply border-0 align-middle;
+  }
+
+  /* -------------------------------------------------------
+     Admin Label
+     ------------------------------------------------------- */
+
+  .aa-label {
+    @apply text-[10px] font-semibold uppercase tracking-[0.12em] text-muted-foreground/60;
+  }
+}
+
